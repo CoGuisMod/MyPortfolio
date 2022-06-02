@@ -7,6 +7,7 @@ module.exports = {
       },
       backgroundImage: {
         "hero-image": "url('/src/assets/hero-image.jpg')",
+        "about-image": "url('/src/assets/about-image.jpg')",
       },
     },
   },

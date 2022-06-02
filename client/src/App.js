@@ -1,15 +1,20 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
-import Home from "./pages/Home";
+import Hero from "./components/Hero/Hero";
+import About from "./components/About/About";
+import Skills from "./components/Skills/Skills";
+import Footer from "./components/Footer/Footer";
+import Contact from "./components/Contact/Contact";
 
 function App() {
   return (
-    <Router>
+    <div className="bg-neutral-900 font-poppins text-white overflow-hidden">
       <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
-    </Router>
+      <Hero />
+      <About />
+      <Skills />
+      <Contact />
+      <Footer />
+    </div>
   );
 }
 

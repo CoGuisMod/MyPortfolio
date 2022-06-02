@@ -1,62 +1,64 @@
 import React from "react";
-import AboutImage from "../../assets/about-image.jpg";
 import { motion } from "framer-motion";
+import SectionTitle from "../Elements/SectionTitle";
 
 const About = () => {
   return (
-    <section className=" bg-neutral-900 w-full h-screen py-20">
-      <div className="w-full max-w-7xl h-full mx-auto">
-        <div className="flex justify-start items-center gap-2">
-          <motion.div
-            initial={{ x: -100, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1 }}
-            className=" bg-purple-500 rounded-full w-8 h-2"
-          ></motion.div>
-          <motion.h4
-            initial={{ x: -100, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: 2 }}
-            className=" text-white text-3xl"
+    <section className="min-h-screen px-4 py-10" id="about">
+      <SectionTitle sectionTitle="About Me" />
+      <div className="grid md:grid-cols-2 gap-8 md:gap-16 max-w-3xl h-full mx-auto pt-6 md:pt-16">
+        <div className="flex flex-col justify-start items-start w-full">
+          <motion.p
+            initial={{ y: -10, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1, delay: 0.5 }}
+            viewport={{ once: true }}
           >
-            About Me
-          </motion.h4>
+            Hi! I'm <span className="font-medium text-purple-500">Camilo</span>,
+            a 20 years old guy from Colombia with a strong passion about
+            technology, i'm a self-taught{" "}
+            <span className="font-medium text-purple-500">
+              Front-End Development
+            </span>{" "}
+            and also i am introducing myself in the world of{" "}
+            <span className="font-medium text-purple-500">UI/UX Design</span>.
+          </motion.p>
+          <motion.p
+            initial={{ y: -10, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1, delay: 0.75 }}
+            viewport={{ once: true }}
+            className="mt-4"
+          >
+            I'm currently doing a degree at Universidad Del Valle about IT, i
+            like food, specially hamburguers and to workout. I consider myself a
+            well-organized person, honest and kinda perfectionist.
+          </motion.p>
+          <motion.a
+            initial={{ y: -10, opacity: 0 }}
+            whileInView={{
+              y: 0,
+              opacity: 1,
+              transition: { duration: 1, delay: 1 },
+            }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            viewport={{ once: true }}
+            className="self-center md:self-start custom-button font-medium text-xl mt-8 button-interaction"
+            href="#contact"
+          >
+            Talk to me!
+          </motion.a>
         </div>
-        <div className="flex gap-16 justify-center w-full h-full pt-16">
-          <div className=" text-white text-lg w-1/3">
-            <p>
-              Hi! I'm Camilo, a{" "}
-              <span className=" text-purple-500">Front-End Developer</span>{" "}
-              located in Colombia, very apassionated about{" "}
-              <span className="text-purple-500">UI/UX Design</span> and
-              currently doing a degree at Universidad Del Valle.
-            </p>
-            <p className="mt-4">
-              I'm an well-organized person, kinda perfectionist. The hamburguer
-              is easily my favorite food, and i like to workout.
-            </p>
-            <div className="mt-8">
-              <motion.button
-                whileInView={{
-                  y: [0, -10, 0],
-                  transition: { duration: 1, repeat: Infinity, repeatDelay: 5 },
-                }}
-                whileHover={{ scale: 1.25 }}
-                whileTap={{ scale: 0.9 }}
-                className="border border-purple-500 rounded-full text-purple-500 text-xl px-4 py-1 hovering-button"
-              >
-                Look at my CV!
-              </motion.button>
-            </div>
-          </div>
-          <div className="h-full">
-            <img
-              className=" rounded-xl h-3/4 scale-125"
-              src={AboutImage}
-              alt=""
-            />
-          </div>
-        </div>
+        <motion.div
+          initial={{ x: 10, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1, delay: 1 }}
+          viewport={{ once: true }}
+          className=" bg-about-image bg-cover bg-top rounded-3xl h-[75vh] custom-shadow"
+        >
+          {/* <img className=" rounded-xl w-full h-full" src={AboutImg} alt="" /> */}
+        </motion.div>
       </div>
     </section>
   );
