@@ -1,5 +1,3 @@
-import { motion } from "framer-motion";
-
 const variantBullet = {
   hidden: { x: -50, opacity: 0 },
   show: {
@@ -52,6 +50,30 @@ const variantGridItem = {
   show: { opacity: 1, transition: { duration: 1 } },
 };
 
+const variantEmail = {
+  hidden: { x: -25, opacity: 0 },
+  show: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+      delay: 1,
+    },
+  },
+};
+
+const variantIcon = {
+  hidden: { y: -25, opacity: 0 },
+  show: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+      delay: 1.5,
+    },
+  },
+};
+
 export {
   variantBullet,
   variantTitle,
@@ -59,4 +81,6 @@ export {
   variantNavMobileHandle,
   variantGridContanier,
   variantGridItem,
+  variantEmail,
+  variantIcon,
 };

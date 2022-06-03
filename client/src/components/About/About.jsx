@@ -4,10 +4,10 @@ import SectionTitle from "../Elements/SectionTitle";
 
 const About = () => {
   return (
-    <section className="min-h-screen px-4 py-10" id="about">
+    <section className="max-w-7xl mx-auto px-4 py-10" id="about">
       <SectionTitle sectionTitle="About Me" />
-      <div className="grid md:grid-cols-2 gap-8 md:gap-16 max-w-3xl h-full mx-auto pt-6 md:pt-16">
-        <div className="flex flex-col justify-start items-start w-full">
+      <div className="grid md:grid-cols-2 gap-8 md:gap-16 max-w-3xl mx-auto mt-8 md:mt-16">
+        <div className="flex flex-col md:text-lg">
           <motion.p
             initial={{ y: -10, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}

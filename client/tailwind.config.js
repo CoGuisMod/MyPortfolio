@@ -9,6 +9,11 @@ module.exports = {
         "hero-image": "url('/src/assets/hero-image.jpg')",
         "about-image": "url('/src/assets/about-image.jpg')",
       },
+      screens: {
+        "mobile-sm": "320px",
+        "mobile-md": "375px",
+        "mobile-lg": "425px",
+      },
     },
   },
   plugins: [],

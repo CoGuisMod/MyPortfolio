@@ -22,7 +22,7 @@ const Header = () => {
     } else {
       setDirection("up");
     }
-    if (window.scrollY != 0) {
+    if (window.scrollY !== 0) {
       setIsOnTop(false);
     } else {
       setIsOnTop(true);
